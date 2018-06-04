@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="euO-Ce-3HA">
-                                <rect key="frame" x="0.0" y="40" width="375" height="96.5"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwO-5H-Ahc">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lru-9m-eq2">
-                                        <rect key="frame" x="0.0" y="28.5" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="300" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -36,27 +36,35 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-6r-UfN">
                                         <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnH-Ea-abz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lru-9m-eq2" secondAttribute="trailing" id="55l-m8-okg"/>
+                                    <constraint firstItem="CPt-6r-UfN" firstAttribute="leading" secondItem="euO-Ce-3HA" secondAttribute="leading" constant="20" id="0Mj-qy-bem"/>
+                                    <constraint firstAttribute="trailing" secondItem="lru-9m-eq2" secondAttribute="trailing" constant="20" id="Pb2-Td-C1o"/>
+                                    <constraint firstItem="AwO-5H-Ahc" firstAttribute="leading" secondItem="euO-Ce-3HA" secondAttribute="leading" constant="20" id="rws-4t-eBY"/>
+                                    <constraint firstItem="lru-9m-eq2" firstAttribute="leading" secondItem="euO-Ce-3HA" secondAttribute="leading" constant="20" id="yha-ZI-8ni"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="euO-Ce-3HA" secondAttribute="trailing" id="1xF-Sl-eio"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="GQB-2z-wGh"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JbH-TA-q9y"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KoB-Kz-ePL"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Mfp-ak-PiP"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NWh-Ju-EYl"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a12-NE-5O5"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eEZ-iv-yB5"/>
-                            <constraint firstItem="euO-Ce-3HA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="pbL-Lr-BcI"/>
+                            <constraint firstAttribute="trailing" secondItem="euO-Ce-3HA" secondAttribute="trailing" id="0Ts-pz-4Le"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="52A-Kq-SO4"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Xh-sd-snd"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="87T-n2-eRb"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="RNw-39-C21"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nOu-Nx-F0Y"/>
+                            <constraint firstItem="euO-Ce-3HA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="woc-zv-AbP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="AwO-5H-Ahc" id="h1U-Ez-wGW"/>
+                        <outlet property="nameTextField" destination="lru-9m-eq2" id="Lzf-Qt-Dhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
